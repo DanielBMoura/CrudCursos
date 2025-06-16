@@ -43,7 +43,7 @@ O projeto pode ser acessado por este link: <br>
 Para clonar o repositório, execute o seguinte comando:
 
 ```bash
-git clone https://github.com/DanielBMoura/Blog-App.git
+git clone https://github.com/DanielBMoura/CrudCursos.git
 ```
 
 ## Inicializando o servidor 🚀
@@ -53,11 +53,17 @@ No CMD, entre na pasta do seu projeto e instale as dependências do projeto:
 npm install
 ```
 
-Crie um arquivo .env na raiz do projeto e adicione o nome de sua collection, senha, e node_env:
+Crie um arquivo .env na raiz do projeto e adicione as seguintes váriaveis, com seus valores atribuidos:
 ```bash
-DB_USER = 'SuaCollection'
-DB_PASSWORD = 'SuaSenha'
-NODE_ENV ='development'
+# Banco de dados PostgreSQL (Neon.tech)
+DB_HOST=SeuHost
+DB_USER=SeuUser
+DB_PASSWORD=SuaPassword
+DB_NAME=SeuName
+DB_SSL=SeuSSL
+
+# Configuração do servidor
+PORT=SuaPorta
 ```
 
 Agora, inice o servidor:
