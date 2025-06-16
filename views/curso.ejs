@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Qikbyte - Programação e Banco de Dados</title>
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+        />
+        <style>
+            table {
+                border-collapse: separate;
+                border-spacing: 8px;
+            }
+        </style>
+    </head> 
+    <body class="container">
+        <h1 style="text-align: center;">=== Cursos ===</h1>
+        <table class="table">
+            <tr>
+                <th style="width: 200px">DESCRIÇÃO</th>
+                <th>CARGA HORARIA</th>
+            </tr>
+            <% for(i=0; i < dados.length; i++){ %>
+            <tr>
+                <td><%= dados[i].descricao %></td>
+                <td><%= dados[i].carga_horaria %></td>
+                <td>
+                    <a class="btn btn-success edit" href="/editar/<%=dados[i].id%>">
+                        Edit
+                    </a>
+                    <a 
+                        class="btn btn-danger delete"
+                        onclick="return confirm('Deseja Excluir?')" 
+                        href="/cursos/Deletar/<%=dados[i].id%>"
+                    >
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+
+        <div class="container">
+            <form action="/cursos/salvar" method="post">
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <input type="text" class="form-control" name="descricao" placeholder="Descrição">
+                </div>
+                <div class="form-group">
+                    <label>Carga horária</label>
+                    <input type="text" class="form-control" name="carga_horaria" placeholder="Carga horária">
+                </div>
+                <button type="submit" class="btn btn-info">Adicionar</button>
+            </form>
+        </div>
+    </body>
+</html>
