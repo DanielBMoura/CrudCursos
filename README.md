@@ -18,8 +18,8 @@ O projeto pode ser acessado por este link: <br>
 
 ## Tecnologias Utilizadas 💻
 
-**Frontend**:
- **Bootstrap 5**: Framework para design responsivo
+**Frontend**:  
+ **Bootstrap 5**: Framework para design responsivo  
  **EJS**: Motor de templates para renderização no servidor
 
 **Backend**:
