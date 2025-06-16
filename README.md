@@ -22,18 +22,21 @@ O projeto pode ser acessado por este link: <br>
  **Bootstrap 5**: Framework para design responsivo  
  **EJS**: Motor de templates para renderização no servidor
 
-**Backend**:
-- **Node.js**: Ambiente de execução JavaScript
-- **Express**: Framework para construção da API
-- **pg**: Cliente PostgreSQL para Node.js
+**Backend**:  
+ **Node.js**: Ambiente de execução JavaScript  
+ **Express**: Framework para construção da API  
+ **pg**: Cliente PostgreSQL para Node.js
 
-**Banco de Dados**:
-- **PostgreSQL**: Banco de dados relacional
-- **Neon.tech**: Hospedagem em nuvem do banco de dados
+**Banco de Dados**:  
+ **PostgreSQL**: Banco de dados relacional  
+ **Neon.tech**: Hospedagem em nuvem do banco de dados
 
-**Outras Ferramentas**:
-- **dotenv**: Gerenciamento de variáveis de ambiente
-- **body-parser**: Middleware para análise de requisições
+**Deploy**:  
+ **Render**: Plataforma para deploy e hospedagem da aplicação
+
+**Outras Ferramentas**:  
+ **dotenv**: Gerenciamento de variáveis de ambiente  
+ **body-parser**: Middleware para análise de requisições
 
 ## Como clonar o repositório 📋
 
