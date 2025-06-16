@@ -24,7 +24,7 @@
         }
     });
 
-app.get('/cursos', async function(req, res) {
+app.get('/', async function(req, res) {
     const { rows } = await pool.query('SELECT * FROM curso');
 
     res.render('./curso', { dados: rows });
@@ -38,7 +38,7 @@ app.post('/cursos/salvar', async function(req, res) {
         [descricao, carga_horaria]
     );
     
-    res.redirect('/cursos');
+    res.redirect('/');
 });
 
 app.get('/editar/:id', async function(req, res) {
@@ -58,13 +58,13 @@ app.post('/atualizar/:id', async function(req, res) {
         [descricao, carga_horaria, req.params.id]
     );
     
-    res.redirect('/cursos');
+    res.redirect('/');
 });
 
 app.get('/cursos/Deletar/:id', async function(req, res) {
     await pool.query('DELETE FROM curso WHERE id = $1', [req.params.id]);
     
-    res.redirect('/cursos');
+    res.redirect('/');
 });
 
 app.listen(process.env.PORT || 3000, function() {
